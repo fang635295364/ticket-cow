@@ -180,7 +180,6 @@ import "../../styles/home.css";
 import item from "./components/home-item";
 import scrollitem from "./components/home-scroll-item";
 import ajax from "../../api/api-home";
-import api from "../../api/index";
 export default {
   name: "Home",
   // 组件注册
