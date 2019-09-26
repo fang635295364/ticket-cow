@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .home-activity-top:after {
   content: "";
   clear: both;
@@ -54,11 +54,12 @@ export default {
   float: right;
 }
 .home-activity-scoll {
+  height: 200px;
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
 }
-.more img{
+.home-activity>.more>img{
   width: 102px;
   height: 137px;
 }

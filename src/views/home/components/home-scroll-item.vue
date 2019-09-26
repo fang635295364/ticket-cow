@@ -23,6 +23,7 @@ export default {};
 <style>
 .home-activity-scoll-item {
   width: 102px;
+  height: 180px;
   margin-right: 10px;
   color: #262626;
   font-size: 14px;

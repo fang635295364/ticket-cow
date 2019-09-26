@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <div v-if="routex==''">
+    <div class="home-idx">
       <!-- home头部 -->
       <div class="home-top">
         <div class="home-top-di1">
@@ -98,7 +98,7 @@
         </div>
       </div>
       <!-- home服务 -->
-      <div class="home-service" @click="skip('/home/service')">
+      <div class="home-service">
         <div>服务保障</div>
         <ul>
           <li>
@@ -116,13 +116,13 @@
       <item>
         <div slot="title">近期热门</div>
         <scrollitem v-for="(item,index) in Details.hot" :key="index">
-          <img :src="item.showPic" alt slot="img" />
+          <img :src="item.showPic" alt slot="img" @click="skip('details',item.id)"/>
           <div slot="name">{{item.showName}}</div>
           <span slot="price">￥{{item.fares}}</span>
           <div slot="like">2000</div>
         </scrollitem>
       </item>
-      <!-- home折扣专区. -->
+      <!-- home折扣专区-->
       <item>
         <div slot="title">折扣专区</div>
         <scrollitem v-for="(item,index) in Details.discount" :key="index">
@@ -168,7 +168,7 @@
         </div>
       </div>
     </div>
-    <router-view v-else></router-view>
+    <router-view class="home-son"></router-view>
   </div>
 </template>
 
@@ -238,7 +238,6 @@ export default {
         }
       ],
       Details: [],
-      routex:''
     };
   },
   created() {
@@ -263,10 +262,8 @@ export default {
     });
   },
   methods: {
-    skip(res) {
-      this.routex=res;
-      this.$router.push(res);
-      console.log(this.routex)
+    skip(res,ids) {
+      this.$router.push({name:res,params:{id:ids}});
     }
   }
 };
