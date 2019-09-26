@@ -7,7 +7,7 @@
       <div class="Y-title">我的订单</div>
     </div>
     <mt-navbar v-model="selected">
-      <mt-tab-item id="1">全部1111</mt-tab-item>
+      <mt-tab-item id="1">全部</mt-tab-item>
       <mt-tab-item id="2">待付款</mt-tab-item>
       <mt-tab-item id="3">待发货</mt-tab-item>
       <mt-tab-item id="4">待收货</mt-tab-item>
